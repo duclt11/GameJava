@@ -1,0 +1,61 @@
+package snake;
+
+import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
+import java.awt.Color;
+
+public class Snake {
+	List<Point> snakePoint;
+	int xDir, yDir;
+	
+	boolean isMoving, elongate;
+	
+	final int STARTSIZE = 20, STARTX = 150, STARTY = 150;
+
+	public Snake() {
+		snakePoint = new ArrayList<Point>();
+		xDir = 0;
+		yDir = 0;
+		isMoving = false;
+		elongate = false;
+		snakePoint.add(new Point(STARTX, STARTY));
+		for(int i = 1; i<STARTSIZE; i++) {
+			snakePoint.add(new Point(STARTX - i*4, STARTY));
+		}
+	}
+
+	public void draw(Graphics g) {
+		g.setColor(Color.WHITE);
+		for(Point p: snakePoint) {
+			g.fillRect(p.getX(), p.getY(), 4, 4);
+		}
+
+	}
+
+	public int getxDir() {
+		return xDir;
+	}
+
+	public void setxDir(int xDir) {
+		this.xDir = xDir;
+	}
+
+	public int getyDir() {
+		return yDir;
+	}
+
+	public void setyDir(int yDir) {
+		this.yDir = yDir;
+	}
+	
+	//Tra ve toa do x cua dau con ran
+	public int getX() {
+		return snakePoint.get(0).getX();
+	}
+	
+	//Tra ve toa do y cua dau con ran
+	public int getY() {
+		return snakePoint.get(0).getY();
+	}
+}

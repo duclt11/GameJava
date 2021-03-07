@@ -1,0 +1,51 @@
+package snake;
+
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+
+public class Snake extends Applet implements Runnable, KeyListener{
+	public void init() {
+		this.resize(400, 400);
+	}
+
+	public void paint(Graphics g) {
+		g.setColor(Color.black);
+		g.fillRect(0, 0, 400, 400);
+	}
+
+	public void update(Graphics g) {
+		paint(g);
+	}
+
+	public void repaint(Graphics g) {
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

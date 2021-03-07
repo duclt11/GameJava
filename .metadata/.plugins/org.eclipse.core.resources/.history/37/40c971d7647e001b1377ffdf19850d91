@@ -1,0 +1,22 @@
+package snake;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Token {
+	private int x, t, score;
+	private Snake snake;
+	
+	public Token(Snake s) {
+		
+		snake = s;
+	}
+	private Point p;
+	public void draw(Graphics g) {
+		g.setColor(Color.GREEN); 
+		g.fillRect((int)Math.random()*400%400, (int)Math.random()*400%400, score, score);
+	}
+	public static void main(String[] args) {
+		System.out.println((int)Math.random()%400);
+	}
+}

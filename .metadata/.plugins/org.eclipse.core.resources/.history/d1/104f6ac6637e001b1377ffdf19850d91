@@ -1,0 +1,10 @@
+package snake;
+
+public class Fruit {
+	private Point p;
+	Graphics 
+	public void draw() {
+		
+	}
+	
+}
